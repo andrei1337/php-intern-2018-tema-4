@@ -11,9 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'PagesController@index');
 
-Route::get('/companies','CompaniesController@index');
-Route::get('/employees', 'EmployeesController@index');
+Route::get('/teams', 'TeamsController@index');
+Route::get('/teams/create', 'TeamsController@create');
+Route::get('/teams/update', 'TeamsController@update');
+
+Route::get('/players', 'PlayersController@index');
+Route::get('/players/create', 'PlayersController@create');
+Route::get('/players/update', 'PlayersController@update');
